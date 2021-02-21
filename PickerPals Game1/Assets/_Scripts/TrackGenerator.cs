@@ -9,7 +9,7 @@ public class TrackGenerator : MonoBehaviour
     [Header("Track Settings")]
     public TrackTypeGenTable getGenTable;
 
-    public GameObject startTrack;   //  Standard Track that is generated
+    public GameObject startTrack;   //  Standard Track that is generated (The 3 points)
     public GameObject firstTrackType;   // makes sure that the first track will be this type
 
     public int TrackLength;                // Set value and then it will be passed over to new tracks
@@ -46,7 +46,7 @@ public class TrackGenerator : MonoBehaviour
 
     void TrackGeneration()
     {
-        getGenTable = GameObject.Find("TableHolder").GetComponent<TrackTypeGenTable>();
+    //    getGenTable = GameObject.Find("TableHolder").GetComponent<TrackTypeGenTable>();
 
         if (curTrackNum == 0)
         {

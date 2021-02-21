@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrackTypeGenTable : MonoBehaviour  // Streamlined universal use for now
+[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/TrackTypeGenTable", order = 2)]
+public class TrackTypeGenTable : ScriptableObject  // Streamlined universal use for now
 {
 
     public GameObject[] myTrackTypes;
