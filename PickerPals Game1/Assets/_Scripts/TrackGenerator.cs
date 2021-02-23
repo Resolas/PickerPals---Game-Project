@@ -19,6 +19,8 @@ public class TrackGenerator : MonoBehaviour
     public Transform spawnPoint;                       // position to spawn track type
     public Transform endSpawnPoint;                         // position to spawn new track
 
+    /*
+
     [Header("Branching Path Settings")]
 
     public GameObject splitTrack;
@@ -29,7 +31,7 @@ public class TrackGenerator : MonoBehaviour
     private bool isLeft = false;
 
     public Transform[] directions;
-
+    */
     [Header("Objective Item Settings")]
     public GameObject myItem;
     public int[] spawnAt = new int[5];

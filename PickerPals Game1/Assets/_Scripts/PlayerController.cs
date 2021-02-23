@@ -75,7 +75,9 @@ public class PlayerController : MonoBehaviour
 
         GroundChecker();
 
-        myRB.AddRelativeForce(transform.forward * forwardSpeed - myRB.velocity);
+      //  myRB.AddRelativeForce(transform.forward * forwardSpeed - myRB.velocity);
+        myRB.velocity = new Vector3(myRB.velocity.x,myRB.velocity.y,20);
+        Debug.Log(myRB.velocity);
 
         myRB.AddRelativeForce(transform.right * sideSpeed * horz - myRB.velocity, ForceMode.Force);
 
