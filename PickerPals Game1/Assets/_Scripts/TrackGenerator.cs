@@ -15,6 +15,7 @@ public class TrackGenerator : MonoBehaviour
     public int TrackLength;                // Set value and then it will be passed over to new tracks
     [SerializeField]
     private int curTrackNum = 0;               // Current value of the track
+    public float rotOffset = 0;
 
     public Transform spawnPoint;                       // position to spawn track type
     public Transform endSpawnPoint;                         // position to spawn new track
@@ -52,9 +53,9 @@ public class TrackGenerator : MonoBehaviour
 
         if (curTrackNum == 0)
         {
-            Instantiate(firstTrackType, spawnPoint.position, spawnPoint.rotation);  // Model Spawner
+            Instantiate(firstTrackType, spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0 + rotOffset, 0, 0));  // Model Spawner
             curTrackNum++;
-            GameObject myNewTrack = Instantiate(startTrack, endSpawnPoint.position, endSpawnPoint.rotation);    // New Track Spawner
+            GameObject myNewTrack = Instantiate(startTrack, endSpawnPoint.position, endSpawnPoint.rotation );    // New Track Spawner
             myNewTrack.GetComponent<TrackGenerator>().TrackLength = TrackLength;
             myNewTrack.GetComponent<TrackGenerator>().curTrackNum = curTrackNum++;
 
@@ -74,7 +75,7 @@ public class TrackGenerator : MonoBehaviour
 
             int rng = Random.Range(0, getGenTable.myTrackTypes.Length);
 
-            Instantiate(getGenTable.myTrackTypes[rng], spawnPoint.position, spawnPoint.rotation);   // Model Spawner
+            Instantiate(getGenTable.myTrackTypes[rng], spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0 + rotOffset, 0, 0));   // Model Spawner
             curTrackNum++;
             GameObject myNewTrack = Instantiate(startTrack, endSpawnPoint.position, endSpawnPoint.rotation);    // New Track Spawner
             myNewTrack.GetComponent<TrackGenerator>().TrackLength = TrackLength;
