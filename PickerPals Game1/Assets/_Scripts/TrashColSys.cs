@@ -28,6 +28,7 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
         newTrash.transform.SetParent(gameObject.transform);
 
         var getTrashComp = newTrash.GetComponent<TrashItem>();
+        
 
         getTrashComp.trashTypeId = _trashType;
         getTrashComp.chosenModel = _model;
@@ -70,6 +71,9 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
                 newTrashData.chosenModel = collectedTrash[rng].GetComponent<TrashItem>().chosenModel;
                 newTrashData.trashTypeId = collectedTrash[rng].GetComponent<TrashItem>().trashTypeId;
 
+                newTrashRB.GetComponent<MeshRenderer>().sharedMaterials = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshRenderer>().sharedMaterials;
+                newTrashRB.GetComponent<MeshFilter>().sharedMesh = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshFilter>().sharedMesh;
+                newTrashRB.GetComponent<MeshCollider>().sharedMesh = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshCollider>().sharedMesh;
 
                 Destroy(collectedTrash[rng].gameObject);
                 collectedTrash.RemoveAt(rng);
