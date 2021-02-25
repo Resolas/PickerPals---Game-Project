@@ -13,6 +13,5 @@ public class TrackGenTable : ScriptableObject       // Not in use atm
 
     public GameObject[] myObstacleTracks;
 
-    
 
 }

@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool onGround;
     public float groundRayDist = 2;
 
-
+    private bool moveLeft;
+    private bool moveRight;
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +34,11 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
 
-        MovementControl();
+        //    MovementControl("NONE");
+        MovementControlKeys();
+        myRB.AddRelativeForce(transform.forward * forwardSpeed - myRB.velocity);
+        GroundChecker();
 
-        
 
     }
 
@@ -64,32 +67,106 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void MovementControl()
+    public void MovementControlKeys()
     {
         horz = Input.GetAxis("Horizontal");
-        jump = Input.GetAxis("Jump");
+        //       jump = Input.GetAxis("Jump");
 
         Debug.Log("Horz = " + horz);
         Debug.Log("Jump =" + jump);
 
 
-        GroundChecker();
 
-      //  myRB.AddRelativeForce(transform.forward * forwardSpeed - myRB.velocity);
-        myRB.velocity = new Vector3(myRB.velocity.x,myRB.velocity.y,20);
+        //       myRB.velocity = new Vector3(myRB.velocity.x, myRB.velocity.y, 20);
         Debug.Log(myRB.velocity);
 
         myRB.AddRelativeForce(transform.right * sideSpeed * horz - myRB.velocity, ForceMode.Force);
-
-
     }
 
-
-    private void OnDrawGizmos()
+    public void MovementControlTouch(string _input)   // LEFT RIGHT NONE
     {
+        string myLInput = _input;
+
+        if (_input == "LEFT")
+        {
+            moveLeft = true;
+        }
+        else
+        {
+            moveLeft = false;
+        }
+        if (_input == "RIGHT")
+        {
+            moveRight = true;
+        }
+        else
+        {
+            moveRight = false;
+        }
+
         
+        if (moveLeft == true) myRB.AddRelativeForce(transform.right * sideSpeed * -1 - myRB.velocity, ForceMode.Force);
+
+        if (moveRight == true) myRB.AddRelativeForce(transform.right * sideSpeed * 1 - myRB.velocity, ForceMode.Force);
+
+        #region Switch Code
+        /*
+        switch (_input)
+        {
+
+            case "NONE":
+                horz = Input.GetAxis("Horizontal");
+         //       jump = Input.GetAxis("Jump");
+
+                Debug.Log("Horz = " + horz);
+                Debug.Log("Jump =" + jump);
+
+
+                  
+         //       myRB.velocity = new Vector3(myRB.velocity.x, myRB.velocity.y, 20);
+                Debug.Log(myRB.velocity);
+
+                myRB.AddRelativeForce(transform.right * sideSpeed * horz - myRB.velocity, ForceMode.Force);
+
+                break;
+
+            case "LEFT":
+
+                myRB.AddRelativeForce(transform.right * sideSpeed * -1 - myRB.velocity, ForceMode.Force);
+                break;
+
+            case "RIGHT":
+
+                myRB.AddRelativeForce(transform.right * sideSpeed * 1 - myRB.velocity, ForceMode.Force);
+                break;
+
+        }
+        */
+        #endregion
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+
+
+        if (other.CompareTag("Item"))
+        {
+
+            TrashItem getTrashId = other.GetComponent<TrashItem>(); // upon collection gets the trash id and send it over to the system VVV
+            TrashColSys getSys = GameObject.FindObjectOfType<TrashColSys>();
+
+            getSys.getTrashId(getTrashId.trashTypeId,getTrashId.chosenModel,getTrashId.myPoints);                   //          <<<<<<<<<<<
+
+            Destroy(other.gameObject);
+
+
+        }
 
 
     }
+
+    
+    
 
 }

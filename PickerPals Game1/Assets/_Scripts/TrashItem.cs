@@ -11,8 +11,14 @@ public class TrashItem : MonoBehaviour
     public byte trashTypeId;
     public GameObject chosenModel;
     public int myPoints;
+ //   private string v;
 
+ //   public TrashItem(string v)
+ //   {
+ //       this.v = v;
+ //   }
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,16 +29,18 @@ public class TrashItem : MonoBehaviour
 
     }
 
-    void copyData()
+    void copyData() // Takes info from TrashData
     {
-        trashTypeId = myData.trashType;
+        if (myData != null)
+        {
+            trashTypeId = myData.trashType;
 
-        int rng = Random.Range(0,myData.models.Length);
-        chosenModel = myData.models[rng];
+            int rng = Random.Range(0, myData.models.Length);
+            chosenModel = myData.models[rng];
 
-        myPoints = myData.points;
-
-
+            myPoints = myData.points;
+        }
+      
 
     }
 
