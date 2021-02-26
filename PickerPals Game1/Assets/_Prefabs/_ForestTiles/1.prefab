@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 2380394250420570740}
   - component: {fileID: 6741710610463059739}
   - component: {fileID: 1642425117596061858}
+  - component: {fileID: 9164099134393543714}
   m_Layer: 0
   m_Name: 1
   m_TagString: Ground
@@ -218,6 +219,19 @@ MonoBehaviour:
   - {fileID: 5277250146197168254}
   myObstaclePoints: []
   myMixedPoints: []
+--- !u!114 &9164099134393543714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511957748597111789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f932c8b1e31924a944245a2eec2b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySpeed: 0
 --- !u!1001 &685676609777848572
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,8 +21,9 @@ public class ObstacleItemGeneration : MonoBehaviour     // Generations Obstacles
             {
                 int rng = Random.Range(0,myTable.items.Length);
 
-                Instantiate(myTable.items[rng],myItemPoints[i].transform.position,Quaternion.identity);
+             var newObject = Instantiate(myTable.items[rng],myItemPoints[i].transform.position,Quaternion.identity);
 
+                newObject.transform.SetParent(gameObject.transform);
             }
 
         }
@@ -33,8 +34,9 @@ public class ObstacleItemGeneration : MonoBehaviour     // Generations Obstacles
             {
                 int rng = Random.Range(0, myTable.items.Length);
 
-                Instantiate(myTable.items[rng], myObstaclePoints[i].transform.position, Quaternion.identity);
+               var newObject = Instantiate(myTable.items[rng], myObstaclePoints[i].transform.position, Quaternion.identity);
 
+                newObject.transform.SetParent(gameObject.transform);
             }
 
         }
@@ -45,8 +47,9 @@ public class ObstacleItemGeneration : MonoBehaviour     // Generations Obstacles
             {
                 int rng = Random.Range(0, myTable.items.Length);
 
-                Instantiate(myTable.items[rng], myMixedPoints[i].transform.position, Quaternion.identity);
+               var newObject = Instantiate(myTable.items[rng], myMixedPoints[i].transform.position, Quaternion.identity);
 
+                newObject.transform.SetParent(gameObject.transform);
             }
 
         }

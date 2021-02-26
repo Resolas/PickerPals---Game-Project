@@ -67,12 +67,12 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
                 GameObject newTrashRB = Instantiate(TrashRBTemplate, mySpawnPoint.transform.position, transform.rotation);
                 TrashItem newTrashData = newTrashRB.GetComponent<TrashItem>();
 
-                // Trash Information
+                // Trash Information        Copies the info to the RB version
                 newTrashData.myPoints = collectedTrash[rng].GetComponent<TrashItem>().myPoints;
                 newTrashData.chosenModel = collectedTrash[rng].GetComponent<TrashItem>().chosenModel;
                 newTrashData.trashTypeId = collectedTrash[rng].GetComponent<TrashItem>().trashTypeId;
 
-                // Colliders & Mesh
+                // Colliders & Mesh         
                 Vector3 getScale = collectedTrash[rng].transform.localScale;
                 newTrashRB.transform.localScale = new Vector3(getScale.x,getScale.y,getScale.z);
                 newTrashRB.GetComponent<MeshRenderer>().sharedMaterials = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshRenderer>().sharedMaterials;
@@ -83,7 +83,7 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
                 collectedTrash.RemoveAt(rng);
             }
 
-            yield return new WaitForSeconds(waitTime);
+        //    yield return new WaitForSeconds(waitTime);
         }
 
 

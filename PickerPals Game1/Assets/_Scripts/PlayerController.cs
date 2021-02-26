@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
     private bool moveLeft;
     private bool moveRight;
 
+    public Transform[] lanePos = new Transform[3];
+    public int curLane = 1;
+    private int newLane;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +35,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+
     void FixedUpdate()
     {
 
         //    MovementControl("NONE");
-        MovementControlKeys();
+        
         myRB.AddRelativeForce(transform.forward * forwardSpeed - myRB.velocity);
         GroundChecker();
 
@@ -44,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        MovementControlKeys();
         if (/*Input.GetAxis("Jump") != 0 &&*/ onGround == true && Input.GetKeyDown(KeyCode.Space))
         {
             myRB.AddRelativeForce(transform.up * jumpPower, ForceMode.Impulse);
@@ -69,6 +75,24 @@ public class PlayerController : MonoBehaviour
 
     public void MovementControlKeys()
     {
+
+        if (Input.GetKeyDown(KeyCode.A) && curLane > 0)
+        {
+            curLane--;
+        }
+
+        if (Input.GetKeyDown(KeyCode.D) && curLane < lanePos.Length - 1)
+        {
+            curLane++;
+        }
+
+        transform.position = Vector3.MoveTowards(transform.position,lanePos[curLane].position,0.1f);
+
+
+
+        #region UNUSED
+        /*
+
         horz = Input.GetAxis("Horizontal");
         //       jump = Input.GetAxis("Jump");
 
@@ -87,7 +111,21 @@ public class PlayerController : MonoBehaviour
         // TouchMovement
         if (moveLeft == true) myRB.AddRelativeForce(transform.right * sideSpeed * -1 - myRB.velocity, ForceMode.Force);
         if (moveRight == true) myRB.AddRelativeForce(transform.right * sideSpeed * 1 - myRB.velocity, ForceMode.Force);
+
+        */
+        #endregion
     }
+
+    public void MovementLaneControlTouch(int value)
+    {
+
+        if (value == -1 && curLane <= 0) return;
+        if (value == 1 && curLane >= lanePos.Length - 1) return;
+
+        curLane += value;
+
+    }
+
 
     public void MovementControlTouchLeft(string _input)   // LEFT RIGHT BOTH
     {
