@@ -81,11 +81,16 @@ public class PlayerController : MonoBehaviour
         Debug.Log(myRB.velocity);
 
         myRB.AddRelativeForce(transform.right * sideSpeed * horz - myRB.velocity, ForceMode.Force);
+
+
+
+        // TouchMovement
+        if (moveLeft == true) myRB.AddRelativeForce(transform.right * sideSpeed * -1 - myRB.velocity, ForceMode.Force);
+        if (moveRight == true) myRB.AddRelativeForce(transform.right * sideSpeed * 1 - myRB.velocity, ForceMode.Force);
     }
 
-    public void MovementControlTouch(string _input)   // LEFT RIGHT NONE
+    public void MovementControlTouchLeft(string _input)   // LEFT RIGHT BOTH
     {
-        string myLInput = _input;
 
         if (_input == "LEFT")
         {
@@ -95,6 +100,12 @@ public class PlayerController : MonoBehaviour
         {
             moveLeft = false;
         }
+
+    }
+
+    public void MovementControlTouchRight(string _input)
+    {
+
         if (_input == "RIGHT")
         {
             moveRight = true;
@@ -105,44 +116,6 @@ public class PlayerController : MonoBehaviour
         }
 
         
-        if (moveLeft == true) myRB.AddRelativeForce(transform.right * sideSpeed * -1 - myRB.velocity, ForceMode.Force);
-
-        if (moveRight == true) myRB.AddRelativeForce(transform.right * sideSpeed * 1 - myRB.velocity, ForceMode.Force);
-
-        #region Switch Code
-        /*
-        switch (_input)
-        {
-
-            case "NONE":
-                horz = Input.GetAxis("Horizontal");
-         //       jump = Input.GetAxis("Jump");
-
-                Debug.Log("Horz = " + horz);
-                Debug.Log("Jump =" + jump);
-
-
-                  
-         //       myRB.velocity = new Vector3(myRB.velocity.x, myRB.velocity.y, 20);
-                Debug.Log(myRB.velocity);
-
-                myRB.AddRelativeForce(transform.right * sideSpeed * horz - myRB.velocity, ForceMode.Force);
-
-                break;
-
-            case "LEFT":
-
-                myRB.AddRelativeForce(transform.right * sideSpeed * -1 - myRB.velocity, ForceMode.Force);
-                break;
-
-            case "RIGHT":
-
-                myRB.AddRelativeForce(transform.right * sideSpeed * 1 - myRB.velocity, ForceMode.Force);
-                break;
-
-        }
-        */
-        #endregion
 
     }
 

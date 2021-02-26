@@ -67,10 +67,14 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
                 GameObject newTrashRB = Instantiate(TrashRBTemplate, mySpawnPoint.transform.position, transform.rotation);
                 TrashItem newTrashData = newTrashRB.GetComponent<TrashItem>();
 
+                // Trash Information
                 newTrashData.myPoints = collectedTrash[rng].GetComponent<TrashItem>().myPoints;
                 newTrashData.chosenModel = collectedTrash[rng].GetComponent<TrashItem>().chosenModel;
                 newTrashData.trashTypeId = collectedTrash[rng].GetComponent<TrashItem>().trashTypeId;
 
+                // Colliders & Mesh
+                Vector3 getScale = collectedTrash[rng].transform.localScale;
+                newTrashRB.transform.localScale = new Vector3(getScale.x,getScale.y,getScale.z);
                 newTrashRB.GetComponent<MeshRenderer>().sharedMaterials = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshRenderer>().sharedMaterials;
                 newTrashRB.GetComponent<MeshFilter>().sharedMesh = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshFilter>().sharedMesh;
                 newTrashRB.GetComponent<MeshCollider>().sharedMesh = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshCollider>().sharedMesh;

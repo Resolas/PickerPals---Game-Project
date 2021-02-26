@@ -11,22 +11,21 @@ public class TrashItem : MonoBehaviour
     public byte trashTypeId;
     public GameObject chosenModel;
     public int myPoints;
- //   private string v;
 
- //   public TrashItem(string v)
- //   {
- //       this.v = v;
- //   }
+    MeshFilter myFilter;
+    MeshRenderer myRenderer;
 
+    [SerializeField] private bool setTrig = true;
     
     // Start is called before the first frame update
     void Start()
     {
-
+        myFilter = GetComponent<MeshFilter>();
+        myRenderer = GetComponent<MeshRenderer>();
 
         copyData();
 
-
+        useDataModel();
     }
 
     void copyData() // Takes info from TrashData
@@ -41,6 +40,33 @@ public class TrashItem : MonoBehaviour
             myPoints = myData.points;
         }
       
+
+    }
+
+    void useDataModel()
+    {
+
+        if (gameObject.GetComponent<Rigidbody>() == true)
+        {
+            setTrig = false;
+        }
+
+        if (gameObject.GetComponent<MeshCollider>() == false)
+        {
+           var newMCol = gameObject.AddComponent<MeshCollider>();
+
+            newMCol.convex = true;
+            newMCol.isTrigger = setTrig;
+
+            Destroy(gameObject.GetComponent<Collider>());
+        }
+
+        if (gameObject.GetComponent<MeshFilter>() != false && gameObject.GetComponent<MeshRenderer>() != false)
+        {
+            myFilter.sharedMesh = chosenModel.GetComponent<MeshFilter>().sharedMesh;
+            myRenderer.sharedMaterials = chosenModel.GetComponent<MeshRenderer>().sharedMaterials;
+        }
+        
 
     }
 

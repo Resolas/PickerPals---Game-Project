@@ -310,7 +310,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1611968352}
           m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: MovementControl
+          m_MethodName: MovementControlTouchRight
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -318,6 +318,22 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: RIGHT
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1611968352}
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+          m_MethodName: MovementControlTouchRight
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: NONE
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &269762862
@@ -656,6 +672,7 @@ MonoBehaviour:
   trashTypeId: 1
   chosenModel: {fileID: 693526320}
   myPoints: 10
+  setTrig: 1
 --- !u!1 &694457510
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +848,7 @@ MonoBehaviour:
   trashTypeId: 0
   chosenModel: {fileID: 0}
   myPoints: 0
+  setTrig: 1
 --- !u!64 &882952896
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1178,6 +1196,7 @@ MonoBehaviour:
   trashTypeId: 0
   chosenModel: {fileID: 0}
   myPoints: 0
+  setTrig: 1
 --- !u!1 &1304411162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,7 +1337,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1611968352}
           m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-          m_MethodName: MovementControl
+          m_MethodName: MovementControlTouchLeft
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1326,6 +1345,22 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: LEFT
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1611968352}
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+          m_MethodName: MovementControlTouchLeft
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: NONE
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1426045419
@@ -1440,6 +1475,7 @@ MonoBehaviour:
   trashTypeId: 0
   chosenModel: {fileID: 0}
   myPoints: 0
+  setTrig: 1
 --- !u!1 &1528627810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,7 +1772,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2661286768458849427, guid: 41a38c312fe01c0478a53bbf615b6d8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.61
+      value: -43.1
       objectReference: {fileID: 0}
     - target: {fileID: 2661286768458849427, guid: 41a38c312fe01c0478a53bbf615b6d8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3175,7 +3211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8802448909436965055, guid: 0af90c9a531fdf74cb7d09a2d78a0c78, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -49.5
       objectReference: {fileID: 0}
     - target: {fileID: 8802448909436965055, guid: 0af90c9a531fdf74cb7d09a2d78a0c78, type: 3}
       propertyPath: m_LocalPosition.y
