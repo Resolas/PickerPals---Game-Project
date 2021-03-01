@@ -62,15 +62,7 @@ public class TrackGenerator : MonoBehaviour
         }
         else if (curTrackNum != 0 && curTrackNum < TrackLength)
         {
-        //    int splitRng = Random.Range(0, 100);
-
-        //    if (splitRng > spawnChance && curTrackNum > spawnMargin)
-          //  {
-            //    int rngDir = Random.Range(0, 2);
-
-
-
-           // }
+        
 
 
             int rng = Random.Range(0, getGenTable.myTrackTypes.Length);
@@ -99,7 +91,9 @@ public class TrackGenerator : MonoBehaviour
 
             if (curTrackNum == spawnAt[i])  // if its equals spawn an item
             {
-                Instantiate(myItem, spawnPoint.position + new Vector3(0,10,0),Quaternion.identity);
+              var newItem = Instantiate(myItem, spawnPoint.position + new Vector3(0,1,0),Quaternion.identity);
+
+
             }
 
         }

@@ -219,6 +219,11 @@ MonoBehaviour:
   - {fileID: 5277250146197168254}
   myObstaclePoints: []
   myMixedPoints: []
+  row: 000000000000000000000000
+  col: 000000000000000000000000
+  firstPoint: {fileID: 2169796678527040795}
+  spawnPoint: {fileID: 4663631561163255937, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
+  spacing: {x: 4, y: 0, z: 8}
 --- !u!114 &9164099134393543714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +247,10 @@ PrefabInstance:
     - target: {fileID: 4663631561163255937, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
       propertyPath: m_Name
       value: SpawnPoint (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663631561163255937, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4663631561163255938, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,6 +326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4663631561163255937, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4663631561163255938, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.366932
@@ -389,15 +402,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4663631561163255937, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
       propertyPath: m_Name
-      value: SpawnPoint
+      value: FirstSpawnPoint
       objectReference: {fileID: 0}
     - target: {fileID: 4663631561163255938, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.362913
+      value: -1.96
       objectReference: {fileID: 0}
     - target: {fileID: 4663631561163255938, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.72
+      value: 4.03
       objectReference: {fileID: 0}
     - target: {fileID: 4663631561163255938, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -464,6 +477,10 @@ PrefabInstance:
     - target: {fileID: 4663631561163255937, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
       propertyPath: m_Name
       value: SpawnPoint (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663631561163255937, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4663631561163255938, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
       propertyPath: m_LocalPosition.x
