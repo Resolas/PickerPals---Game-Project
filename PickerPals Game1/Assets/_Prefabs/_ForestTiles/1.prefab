@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 6741710610463059739}
   - component: {fileID: 1642425117596061858}
   - component: {fileID: 9164099134393543714}
+  - component: {fileID: 2787526067172741759}
   m_Layer: 0
   m_Name: 1
   m_TagString: Ground
@@ -212,18 +213,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTable: {fileID: 11400000, guid: e369dd2a8449eea42b49a864a3995cfa, type: 2}
-  myItemPoints:
-  - {fileID: 2169796678527040795}
-  - {fileID: 7307366720834247105}
-  - {fileID: 2265221412700987977}
-  - {fileID: 5277250146197168254}
-  myObstaclePoints: []
-  myMixedPoints: []
   row: 000000000000000000000000
   col: 000000000000000000000000
   firstPoint: {fileID: 2169796678527040795}
   spawnPoint: {fileID: 4663631561163255937, guid: 55a659cb42783d2479e9f7ca32896f75, type: 3}
   spacing: {x: 4, y: 0, z: 8}
+  currentObjects: []
 --- !u!114 &9164099134393543714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +232,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpeed: 0
+  normalForward: 0
+--- !u!114 &2787526067172741759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511957748597111789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8e1e6120053c14d9d01d8dd2a99d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getTrackLength: {fileID: 0}
+  getmyObItemGen: {fileID: 0}
+  rePos: 25.25
 --- !u!1001 &685676609777848572
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3851824085279864774}
   - component: {fileID: 3936749025876017606}
   - component: {fileID: 1603614099248242791}
+  - component: {fileID: -309501880110841157}
   m_Layer: 0
   m_Name: 7
   m_TagString: Ground
@@ -111,6 +112,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpeed: 0
+  normalForward: 0
+--- !u!114 &-309501880110841157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3936749025876017607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8e1e6120053c14d9d01d8dd2a99d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getTrackLength: {fileID: 0}
+  getmyObItemGen: {fileID: 0}
+  rePos: 25.25
 --- !u!1 &8495901394251129017
 GameObject:
   m_ObjectHideFlags: 0

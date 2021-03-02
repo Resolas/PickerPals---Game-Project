@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class TileSpeed : MonoBehaviour
 {
-    
-    public float mySpeed;
-
+    public float startDelay;
+    private float mySpeed = 0;
+  //  private int speedMult = 0;
     public bool normalForward;
 
-    // Update is called once per frame
+    
+
     void Update()
     {
         mySpeed = GameStats.Globalspeed;
@@ -24,4 +25,6 @@ public class TileSpeed : MonoBehaviour
         }
         
     }
+
+    
 }

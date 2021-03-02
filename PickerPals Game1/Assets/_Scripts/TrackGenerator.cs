@@ -47,17 +47,23 @@ public class TrackGenerator : MonoBehaviour
 
     }
 
+    
+
     void TrackGeneration()
     {
     //    getGenTable = GameObject.Find("TableHolder").GetComponent<TrackTypeGenTable>();
 
         if (curTrackNum == 0)
         {
-            Instantiate(firstTrackType, spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0 + rotOffset, 0, 0));  // Model Spawner
+            GameObject myNewModel = Instantiate(firstTrackType, spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0 + rotOffset, 0, 0));  // Model Spawner
             curTrackNum++;
             GameObject myNewTrack = Instantiate(startTrack, endSpawnPoint.position, endSpawnPoint.rotation );    // New Track Spawner
             myNewTrack.GetComponent<TrackGenerator>().TrackLength = TrackLength;
             myNewTrack.GetComponent<TrackGenerator>().curTrackNum = curTrackNum++;
+
+            myNewModel.GetComponent<Renew>().getTrackLength = GetComponent<TrackGenerator>();
+
+
 
         }
         else if (curTrackNum != 0 && curTrackNum < TrackLength)
@@ -67,12 +73,13 @@ public class TrackGenerator : MonoBehaviour
 
             int rng = Random.Range(0, getGenTable.myTrackTypes.Length);
 
-            Instantiate(getGenTable.myTrackTypes[rng], spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0 + rotOffset, 0, 0));   // Model Spawner
+            GameObject myNewModel = Instantiate(getGenTable.myTrackTypes[rng], spawnPoint.position, spawnPoint.rotation * Quaternion.Euler(0 + rotOffset, 0, 0));   // Model Spawner
             curTrackNum++;
             GameObject myNewTrack = Instantiate(startTrack, endSpawnPoint.position, endSpawnPoint.rotation);    // New Track Spawner
             myNewTrack.GetComponent<TrackGenerator>().TrackLength = TrackLength;
             myNewTrack.GetComponent<TrackGenerator>().curTrackNum = curTrackNum++;
 
+            myNewModel.GetComponent<Renew>().getTrackLength = GetComponent<TrackGenerator>();
 
             SpawnItems();
 
@@ -100,6 +107,8 @@ public class TrackGenerator : MonoBehaviour
 
 
     }
+
+    
 
 
 
