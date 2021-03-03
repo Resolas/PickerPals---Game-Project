@@ -24,7 +24,10 @@ public class TrashItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (GetComponent<MeshFilter>() != null)
         myFilter = GetComponent<MeshFilter>();
+
+        if (GetComponent<MeshRenderer>() != null)
         myRenderer = GetComponent<MeshRenderer>();
 
         copyData();
@@ -75,6 +78,7 @@ public class TrashItem : MonoBehaviour
 
         if (gameObject.GetComponent<MeshFilter>() != false && gameObject.GetComponent<MeshRenderer>() != false)
         {
+
             myFilter.sharedMesh = chosenModel.GetComponent<MeshFilter>().sharedMesh;
             myRenderer.sharedMaterials = chosenModel.GetComponent<MeshRenderer>().sharedMaterials;
         }
