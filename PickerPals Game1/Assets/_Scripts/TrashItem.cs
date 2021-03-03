@@ -55,7 +55,7 @@ public class TrashItem : MonoBehaviour
             setTrig = false;
         }
 
-        if (gameObject.GetComponent<MeshCollider>() == false && useCubeCollider != true)
+        if (gameObject.GetComponent<MeshCollider>() == false && useCubeCollider != true && chosenModel.GetComponent<MeshFilter>().sharedMesh != null)
         {
             var newMCol = gameObject.AddComponent<MeshCollider>();
 
@@ -64,7 +64,7 @@ public class TrashItem : MonoBehaviour
 
             Destroy(gameObject.GetComponent<BoxCollider>());
         }
-        else if (gameObject.GetComponent<BoxCollider>() == false && useCubeCollider != false)
+        else if (gameObject.GetComponent<BoxCollider>() == false && useCubeCollider != false || chosenModel.GetComponent<MeshFilter>().sharedMesh == null)
         {
 
             var newCCol = gameObject.AddComponent<BoxCollider>();

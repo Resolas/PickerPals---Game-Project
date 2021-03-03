@@ -108,8 +108,13 @@ public class TrackGenerator : MonoBehaviour
 
     }
 
-    
 
+    private void OnDrawGizmos()
+    {
+        
+        Debug.DrawLine(gameObject.transform.position, endSpawnPoint.transform.position,Color.green);
+
+    }
 
 
 }
