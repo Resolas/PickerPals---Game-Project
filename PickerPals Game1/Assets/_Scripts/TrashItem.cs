@@ -12,6 +12,10 @@ public class TrashItem : MonoBehaviour
     public GameObject chosenModel;
     public int myPoints;
 
+    [Header("Settings")]
+    public bool useCubeCollider = false;
+    public bool useCubeColliderRB = false;
+
     MeshFilter myFilter;
     MeshRenderer myRenderer;
 
@@ -51,14 +55,22 @@ public class TrashItem : MonoBehaviour
             setTrig = false;
         }
 
-        if (gameObject.GetComponent<MeshCollider>() == false)
+        if (gameObject.GetComponent<MeshCollider>() == false && useCubeCollider != true)
         {
-           var newMCol = gameObject.AddComponent<MeshCollider>();
+            var newMCol = gameObject.AddComponent<MeshCollider>();
 
             newMCol.convex = true;
             newMCol.isTrigger = setTrig;
 
-            Destroy(gameObject.GetComponent<Collider>());
+            Destroy(gameObject.GetComponent<BoxCollider>());
+        }
+        else if (gameObject.GetComponent<BoxCollider>() == false && useCubeCollider != false)
+        {
+
+            var newCCol = gameObject.AddComponent<BoxCollider>();
+
+            newCCol.isTrigger = setTrig;
+
         }
 
         if (gameObject.GetComponent<MeshFilter>() != false && gameObject.GetComponent<MeshRenderer>() != false)

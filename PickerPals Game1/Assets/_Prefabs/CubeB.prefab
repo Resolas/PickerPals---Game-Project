@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myData: {fileID: 11400000, guid: cc49d0ac875650f42a0dbdfa4cf624f5, type: 2}
-  trashTypeId: 0
+  trashTypeId: 1
   chosenModel: {fileID: 0}
   myPoints: 0
+  setTrig: 1
