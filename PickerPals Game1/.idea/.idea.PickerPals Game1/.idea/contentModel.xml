@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Josh\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Josh\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_PickerPals Game1.-1418140654.00" t="ExcludeRecursive" />
+    <e p="D:\Unity\PickerPals---Game-Project\PickerPals Game1" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_Scripts" t="Include">
+          <e p="DestroySelf.cs" t="Include" />
+          <e p="GameStats.cs" t="Include" />
+          <e p="GridSpawn.cs" t="Include" />
+          <e p="ItemObsTable.cs" t="Include" />
+          <e p="ObstacleItemGeneration.cs" t="Include" />
+          <e p="PlayerController.cs" t="Include" />
+          <e p="Renew.cs" t="Include" />
+          <e p="SaveOnLoad.cs" t="Include" />
+          <e p="TileSpeed.cs" t="Include" />
+          <e p="TrackGenerator.cs" t="Include" />
+          <e p="TrackGenTable.cs" t="Include" />
+          <e p="TrackTypeGenerator.cs" t="Include" />
+          <e p="TrackTypeGenTable.cs" t="Include" />
+          <e p="TrashColSys.cs" t="Include" />
+          <e p="TrashData.cs" t="Include" />
+          <e p="TrashDataContainer.cs" t="Include" />
+          <e p="TrashItem.cs" t="Include" />
+          <e p="TrashRB.cs" t="Include" />
+          <e p="VelocityTest.cs" t="Include" />
+        </e>
+        <e p="Josh" t="Include">
+          <e p="BeltMove.cs" t="Include" />
+          <e p="DragAndDrop.cs" t="Include" />
+          <e p="SortingSpawner.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="PickerPals Game1.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
