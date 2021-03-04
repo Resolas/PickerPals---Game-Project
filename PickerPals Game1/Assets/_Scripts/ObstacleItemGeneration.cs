@@ -142,7 +142,7 @@ public class ObstacleItemGeneration : MonoBehaviour     // Generations Obstacles
 
                     int obstacleRng = Random.Range(0,myTable.obstacles.Length);
 
-                  var newObstacle = Instantiate(myTable.obstacles[obstacleRng],gridSys[i,j].transform.position, Quaternion.identity);
+                  var newObstacle = Instantiate(myTable.obstacles[obstacleRng],gridSys[i,j].transform.position + new Vector3(0,-1,0),Quaternion.Euler(-90,0,0));
                     newObstacle.transform.SetParent(transform);
 
                     currentObjects.Add(newObstacle);

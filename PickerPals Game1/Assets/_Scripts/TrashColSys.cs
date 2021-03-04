@@ -78,7 +78,7 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
                 newTrashRB.GetComponent<MeshRenderer>().sharedMaterials = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshRenderer>().sharedMaterials;
                 newTrashRB.GetComponent<MeshFilter>().sharedMesh = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshFilter>().sharedMesh;
 
-                if ()
+              //  if ()
 
                 newTrashRB.GetComponent<MeshCollider>().sharedMesh = collectedTrash[rng].GetComponent<TrashItem>().chosenModel.GetComponent<MeshCollider>().sharedMesh;
 
