@@ -157,6 +157,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
+
+    [Header("Pickup Settings")]
+    public GameObject trashPickupEffect;
+ //   public GameObject powerPickupEffect;
+
     private void OnTriggerStay(Collider other)
     {
 
@@ -168,6 +173,8 @@ public class PlayerController : MonoBehaviour
             TrashColSys getSys = GameObject.FindObjectOfType<TrashColSys>();
 
             getSys.getTrashId(getTrashId.trashTypeId,getTrashId.chosenModel,getTrashId.myPoints);                   //          <<<<<<<<<<<
+
+            Instantiate(trashPickupEffect,other.transform.position,Quaternion.identity);
 
             Destroy(other.gameObject);
 

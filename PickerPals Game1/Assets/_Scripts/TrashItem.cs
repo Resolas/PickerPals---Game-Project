@@ -30,9 +30,20 @@ public class TrashItem : MonoBehaviour
         if (GetComponent<MeshRenderer>() != null)
         myRenderer = GetComponent<MeshRenderer>();
 
+        RandomizeRotation();
+
         copyData();
 
         useDataModel();
+    }
+
+    void RandomizeRotation()
+    {
+        var rngX = Random.Range(0,360);
+        var rngY = Random.Range(0,360);
+        var rngZ = Random.Range(0,360);
+
+        transform.Rotate(rngX, rngY, rngZ);
     }
 
     void copyData() // Takes info from TrashData
@@ -58,7 +69,7 @@ public class TrashItem : MonoBehaviour
             setTrig = false;
         }
 
-        if (gameObject.GetComponent<MeshCollider>() == false && useCubeCollider != true && chosenModel.GetComponent<MeshFilter>().sharedMesh != null)
+        if (gameObject.GetComponent<MeshCollider>() == false && useCubeCollider != true )//   && chosenModel.GetComponent<MeshFilter>().sharedMesh != null
         {
             var newMCol = gameObject.AddComponent<MeshCollider>();
 
@@ -67,7 +78,7 @@ public class TrashItem : MonoBehaviour
 
             Destroy(gameObject.GetComponent<BoxCollider>());
         }
-        else if (gameObject.GetComponent<BoxCollider>() == false && useCubeCollider != false || chosenModel.GetComponent<MeshFilter>().sharedMesh == null)
+        else if (gameObject.GetComponent<BoxCollider>() == false && useCubeCollider != false )//  || chosenModel.GetComponent<MeshFilter>().sharedMesh == null
         {
 
             var newCCol = gameObject.AddComponent<BoxCollider>();
