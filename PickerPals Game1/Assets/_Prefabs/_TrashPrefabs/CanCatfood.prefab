@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8171890314461708175}
   - component: {fileID: 5100248944567316522}
   - component: {fileID: 6999524202737698016}
+  - component: {fileID: 8711718823228683737}
+  - component: {fileID: -3735076104884879436}
+  - component: {fileID: -8896283443633526063}
   m_Layer: 0
   m_Name: CanCatfood
   m_TagString: Untagged
@@ -81,3 +84,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8711718823228683737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801074210693817653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4613148, y: 0.30498567, z: 0.43670186}
+  m_Center: {x: 0.09974017, y: -0.023564551, z: 0.21835092}
+--- !u!64 &-3735076104884879436
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801074210693817653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -951608786083511892, guid: a41bb70f2e9bcba499c08aa831cfed17, type: 3}
+--- !u!114 &-8896283443633526063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801074210693817653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b1ac2ca724c1b4c877f44c4768bf34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 0}
+  trashTypeId: 0
+  myPrefab: {fileID: 8801074210693817653}
+  chosenModel: {fileID: 8801074210693817653}
+  myPoints: 15
+  useMeshColliderRB: 0
+  useCubeColliderRB: 1
+  setTrig: 1

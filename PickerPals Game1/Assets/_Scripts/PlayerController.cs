@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class PlayerController : MonoBehaviour
 
     private bool moveLeft;
     private bool moveRight;
+
+    public int health = 5;
+    public Text myText;
 
     public Transform[] lanePos = new Transform[3];
     public int curLane = 1;
@@ -43,7 +47,7 @@ public class PlayerController : MonoBehaviour
         
         myRB.AddRelativeForce(transform.forward * forwardSpeed - myRB.velocity);
         GroundChecker();
-
+        UIElements();
 
     }
 
@@ -160,6 +164,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Pickup Settings")]
     public GameObject trashPickupEffect;
+    public GameObject obstacleEffect;
  //   public GameObject powerPickupEffect;
 
     private void OnTriggerStay(Collider other)
@@ -169,10 +174,10 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Item"))
         {
 
-            TrashItem getTrashId = other.GetComponent<TrashItem>(); // upon collection gets the trash id and send it over to the system VVV
+            TrashItem getTrashId = other.GetComponent<TrashItem>();                 // upon collection gets the trash id and send it over to the system VVV
             TrashColSys getSys = GameObject.FindObjectOfType<TrashColSys>();
 
-            getSys.getTrashId(getTrashId.trashTypeId,getTrashId.chosenModel,getTrashId.myPoints);                   //          <<<<<<<<<<<
+            getSys.getTrashId(getTrashId.trashTypeId,getTrashId.myPrefab,getTrashId.chosenModel,getTrashId.myPoints);                   //          <<<<<<<<<<<
 
             Instantiate(trashPickupEffect,other.transform.position,Quaternion.identity);
 
@@ -181,10 +186,29 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        if (other.CompareTag("Obstacle"))
+        {
+
+            health--;
+
+        //    Instantiate(obstacleEffect,gameObject.transform.position,Quaternion.identity);
+
+            Destroy(other.gameObject);
+
+
+
+        }
+
 
     }
 
-    
+    void UIElements()
+    {
+
+        myText.text = health.ToString();
+
+
+    }
     
 
 }

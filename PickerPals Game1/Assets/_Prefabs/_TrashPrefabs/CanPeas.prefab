@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 2721420528929636233}
   - component: {fileID: 1327354729944150060}
   - component: {fileID: 3859375225239078118}
+  - component: {fileID: 111009666113844511}
+  - component: {fileID: 6756587896664154273}
+  - component: {fileID: -2581841769772452846}
   m_Layer: 0
   m_Name: CanPeas
   m_TagString: Untagged
@@ -81,3 +84,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &111009666113844511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355108201107170611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4613149, y: 0.30498567, z: 0.4367019}
+  m_Center: {x: 0.099743985, y: -0.023564542, z: 0.2183509}
+--- !u!64 &6756587896664154273
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355108201107170611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -951608786083511892, guid: 1ad7b345421ede944b07895d6070f261, type: 3}
+--- !u!114 &-2581841769772452846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355108201107170611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b1ac2ca724c1b4c877f44c4768bf34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myData: {fileID: 0}
+  trashTypeId: 0
+  myPrefab: {fileID: 3355108201107170611}
+  chosenModel: {fileID: 3355108201107170611}
+  myPoints: 15
+  useMeshColliderRB: 0
+  useCubeColliderRB: 1
+  setTrig: 1

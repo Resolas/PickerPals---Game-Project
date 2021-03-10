@@ -21,22 +21,23 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
         getSpawnPoint();
     }
 
-    public void getTrashId(byte _trashType, GameObject _model, int _points)
+    public void getTrashId(byte _trashType,GameObject _prefab , GameObject _model, int _points)
     {
 
-        GameObject newTrash = Instantiate(objectData,transform.position,Quaternion.identity);
+        GameObject newTrash = Instantiate(_prefab,transform.position,Quaternion.identity);       
         newTrash.transform.SetParent(gameObject.transform);
 
         var getTrashComp = newTrash.GetComponent<TrashItem>();
         
 
-        getTrashComp.trashTypeId = _trashType;
-        getTrashComp.chosenModel = _model;
-        getTrashComp.myPoints = _points;
+    //    getTrashComp.trashTypeId = _trashType;
+    //    getTrashComp.myPrefab = _prefab;
+    //    getTrashComp.chosenModel = _model;
+    //    getTrashComp.myPoints = _points;
         
       //  myTrashContainer.myTrashList.Add(newTrash);
       //  Debug.Log("TEST");
-        collectedTrash.Add(newTrash);
+         collectedTrash.Add(newTrash);
 
     }
 
@@ -61,6 +62,28 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
             yield return new WaitForSeconds(waitTime);
             if (collectedTrash != null)
             {
+
+                int rng = Random.Range(0, collectedTrash.Count); // Picks a Trash Data number
+
+                GameObject newTrashRB = Instantiate(collectedTrash[rng], mySpawnPoint.transform.position, transform.rotation);
+                var checkColSet = newTrashRB.GetComponent<TrashItem>();
+
+                if (checkColSet.useCubeColliderRB && newTrashRB.GetComponent<BoxCollider>() != null) newTrashRB.GetComponent<BoxCollider>().isTrigger = false;
+
+                if (checkColSet.useMeshColliderRB && newTrashRB.GetComponent<MeshCollider>() != null) newTrashRB.GetComponent<MeshCollider>().isTrigger = false;
+
+                // Adds components to trash for use in sorting stage
+                newTrashRB.AddComponent<Rigidbody>();
+                newTrashRB.AddComponent<DragAndDrop>();
+                newTrashRB.AddComponent<BeltMove>();
+
+                
+
+                Destroy(collectedTrash[rng].gameObject);        // Deletes that trash object
+                collectedTrash.RemoveAt(rng);               // Clears Element of that trash
+
+                #region unused
+                /*
                 int rng = Random.Range(0, collectedTrash.Count); // Picks a Trash Data number
 
 
@@ -84,9 +107,13 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
 
                 Destroy(collectedTrash[rng].gameObject);
                 collectedTrash.RemoveAt(rng);
+                */
+                #endregion
             }
 
-        //    yield return new WaitForSeconds(waitTime);
+            //    yield return new WaitForSeconds(waitTime);
+
+
         }
 
 

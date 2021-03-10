@@ -8,7 +8,7 @@ public class TrashData : ScriptableObject  // Describes what type of trash it is
 
     public byte trashType;      // the type of trash    METAL = 0, GLASS = 1, PLASTIC = 2, PAPER&CARDBOARD = 3, FOOD = 4
 
-    public GameObject[] models; // put models in that are the same type of trash recycleable, non - recycleable etc...
+    public GameObject[] models; // put models/gameobjects in that are the same type of trash recycleable, non - recycleable etc...
 
     public int points;
 

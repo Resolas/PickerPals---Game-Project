@@ -133,7 +133,7 @@ public class ObstacleItemGeneration : MonoBehaviour     // Generations Obstacles
 
                  var newItem = Instantiate(myTable.items[itemRng],gridSys[i,j].transform.position, Quaternion.identity);
                     newItem.transform.SetParent(transform);
-
+                    newItem.tag = "Item";
                     currentObjects.Add(newItem);
 
                 }
@@ -144,7 +144,7 @@ public class ObstacleItemGeneration : MonoBehaviour     // Generations Obstacles
 
                   var newObstacle = Instantiate(myTable.obstacles[obstacleRng],gridSys[i,j].transform.position + new Vector3(0,-1,0),Quaternion.Euler(-90,0,0));
                     newObstacle.transform.SetParent(transform);
-
+                    newObstacle.tag = "Obstacle";
                     currentObjects.Add(newObstacle);
 
                     curObNum++;

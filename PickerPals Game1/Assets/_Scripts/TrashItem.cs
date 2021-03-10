@@ -7,13 +7,15 @@ public class TrashItem : MonoBehaviour
 
     public TrashData myData;
 
-    [Header("Variables modded by TrashData")]
+    [Header("Trash Settings")]
     public byte trashTypeId;
-    public GameObject chosenModel;
+
+    public GameObject myPrefab; // REFERENCE ITSELF
+    public GameObject chosenModel; // OBSOLETE
     public int myPoints;
 
-    [Header("Settings")]
-    public bool useCubeCollider = false;
+    [Header("Collider Settings")]
+    public bool useMeshColliderRB = false;
     public bool useCubeColliderRB = false;
 
     MeshFilter myFilter;
@@ -32,9 +34,9 @@ public class TrashItem : MonoBehaviour
 
         RandomizeRotation();
 
-        copyData();
+    //    copyData();
 
-        useDataModel();
+    //    useDataModel();
     }
 
     void RandomizeRotation()
@@ -60,7 +62,7 @@ public class TrashItem : MonoBehaviour
       
 
     }
-
+    /*
     void useDataModel()
     {
 
@@ -87,16 +89,24 @@ public class TrashItem : MonoBehaviour
 
         }
 
-        if (gameObject.GetComponent<MeshFilter>() != false && gameObject.GetComponent<MeshRenderer>() != false)
+        if (chosenModel.GetComponent<MeshFilter>() != false && chosenModel.GetComponent<MeshRenderer>() != false)
         {
 
             myFilter.sharedMesh = chosenModel.GetComponent<MeshFilter>().sharedMesh;
             myRenderer.sharedMaterials = chosenModel.GetComponent<MeshRenderer>().sharedMaterials;
         }
+        else
+        {
+
+            var getRep = chosenModel.GetComponent<MultiModelVer>();
+
+            getRep.SpawnModels();
+
+        }
         
 
     }
 
-    
+    */
     
 }
