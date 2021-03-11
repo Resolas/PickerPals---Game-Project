@@ -179,6 +179,8 @@ public class PlayerController : MonoBehaviour
 
             getSys.getTrashId(getTrashId.trashTypeId,getTrashId.myPrefab,getTrashId.chosenModel,getTrashId.myPoints);                   //          <<<<<<<<<<<
 
+            GameStats.myScore += getTrashId.myPoints;
+
             Instantiate(trashPickupEffect,other.transform.position,Quaternion.identity);
 
             Destroy(other.gameObject);

@@ -58,6 +58,13 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
 
     }
 
+    [Header("RBSpawner Settings")]
+    public float beltSpeed = -1;
+    public bool checkOnBelt = true;
+    public float dragHoldDist = 4;
+    public float setThrowClamp = 5;
+    public float setThrowSpeed = 0;
+
     IEnumerator SpawnTrash(float waitTime)
     {
         while (true)
@@ -77,17 +84,20 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
 
                 // Adds components to trash for use in sorting stage
                 newTrashRB.AddComponent<Rigidbody>();
-                newTrashRB.AddComponent<DragAndDrop>();
                 newTrashRB.AddComponent<BeltMove>();
+                newTrashRB.AddComponent<DragAndDrop>();
+                
 
                 // sets the new components values
 
                 var setBelt = newTrashRB.GetComponent<BeltMove>();
                 var setDrag = newTrashRB.GetComponent<DragAndDrop>();
 
-                setBelt.speed = -1;
-                setBelt.onBelt = true;
-                setDrag.zoom = 4;
+                setBelt.speed = beltSpeed;
+                setBelt.onBelt = checkOnBelt;
+                setDrag.zoom = dragHoldDist;
+                setDrag.throwClamp = setThrowClamp;
+                setDrag.throwSpeed = setThrowSpeed;
 
                 Destroy(collectedTrash[rng].gameObject);        // Deletes that trash object
                 collectedTrash.RemoveAt(rng);               // Clears Element of that trash

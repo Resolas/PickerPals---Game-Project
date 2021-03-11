@@ -29,6 +29,10 @@ public class DragAndDrop : MonoBehaviour
     {
         // Find RigidBody
         rb = GetComponent<Rigidbody>();
+
+        // Find BeltMove
+        beltMoveScript = GetComponent<BeltMove>();
+
     }
 
     void Update()

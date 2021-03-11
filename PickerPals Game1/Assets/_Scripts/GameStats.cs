@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameStats : MonoBehaviour
 {
@@ -8,9 +9,11 @@ public class GameStats : MonoBehaviour
     public static float Globalspeed = 0;
     public float setSpeed = 10;
     public int quota;
+    public static int myScore;
+    public static int myHighScore;
     public GameObject[] levelsUnlocked; // for the buttons of levels to turn on or off
 
-
+    public Text displayScore;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +24,9 @@ public class GameStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        displayScore.text = myScore.ToString();
+
     }
 
     IEnumerator StartDelay(float waitTime)
