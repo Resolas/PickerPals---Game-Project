@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for every trash item collected its data will gathered and added to a list, and will reappear here
 {
@@ -12,13 +13,13 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
 
     public GameObject objectData;
     public GameObject mySpawnPoint;
-    public GameObject TrashRBTemplate;
+  //  public GameObject TrashRBTemplate;
 
     //  public GameObject emptyObject;
 
     private void Start()
     {
-        getSpawnPoint();
+    //    getSpawnPoint();
     }
 
     public void getTrashId(byte _trashType,GameObject _prefab , GameObject _model, int _points)
@@ -40,6 +41,8 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
          collectedTrash.Add(newTrash);
 
     }
+
+    
 
     public void getSpawnPoint()
     {
@@ -77,7 +80,14 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
                 newTrashRB.AddComponent<DragAndDrop>();
                 newTrashRB.AddComponent<BeltMove>();
 
-                
+                // sets the new components values
+
+                var setBelt = newTrashRB.GetComponent<BeltMove>();
+                var setDrag = newTrashRB.GetComponent<DragAndDrop>();
+
+                setBelt.speed = -1;
+                setBelt.onBelt = true;
+                setDrag.zoom = 4;
 
                 Destroy(collectedTrash[rng].gameObject);        // Deletes that trash object
                 collectedTrash.RemoveAt(rng);               // Clears Element of that trash

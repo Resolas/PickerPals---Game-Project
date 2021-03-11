@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 395163075957055332}
   - component: {fileID: 6580972888461688590}
   - component: {fileID: -6223017970600423341}
+  - component: {fileID: 1089594312297512662}
   m_Layer: 0
   m_Name: Rock 7
   m_TagString: Untagged
@@ -95,3 +96,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.503529, y: 2.4568422, z: 1.9539484}
   m_Center: {x: -0.041746914, y: -0.2981091, z: 0.28867853}
+--- !u!114 &1089594312297512662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475786154255756638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b0a5d174dd22443a7631ee8d09bab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEffect: {fileID: 4719730861328237229, guid: 9df700804c310cd459fad64950016526, type: 3}

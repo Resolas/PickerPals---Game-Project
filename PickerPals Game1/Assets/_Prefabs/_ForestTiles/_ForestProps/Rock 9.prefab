@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3774466763693669642}
   - component: {fileID: 4825993128731415631}
   - component: {fileID: 2856574665192410033}
+  - component: {fileID: 682457807611029133}
   m_Layer: 0
   m_Name: Rock 9
   m_TagString: Untagged
@@ -95,3 +96,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9867839, y: 2.5776904, z: 1.7690922}
   m_Center: {x: -0.07448357, y: 0.0883679, z: 0.42029372}
+--- !u!114 &682457807611029133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303768736803111264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b0a5d174dd22443a7631ee8d09bab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEffect: {fileID: 4719730861328237229, guid: 9df700804c310cd459fad64950016526, type: 3}

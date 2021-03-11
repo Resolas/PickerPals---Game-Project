@@ -185,7 +185,7 @@ public class PlayerController : MonoBehaviour
 
 
         }
-
+        /*
         if (other.CompareTag("Obstacle"))
         {
 
@@ -198,7 +198,7 @@ public class PlayerController : MonoBehaviour
 
 
         }
-
+        */
 
     }
 
