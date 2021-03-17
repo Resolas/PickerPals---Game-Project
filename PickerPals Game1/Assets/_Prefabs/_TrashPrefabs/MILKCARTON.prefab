@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 4353414002913679253}
   - component: {fileID: 3972665618486906158}
   - component: {fileID: 4748094123718678918}
+  - component: {fileID: -5234473921270385446}
   m_Layer: 0
   m_Name: MILKCARTON
   m_TagString: Untagged
@@ -163,6 +164,21 @@ MonoBehaviour:
   useMeshColliderRB: 0
   useCubeColliderRB: 1
   setTrig: 1
+--- !u!114 &-5234473921270385446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972665618486906159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee088f924d7e374b8582b73c2cdfb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeedX: 5
+  rotSpeedY: 5
+  rotSpeedZ: 5
 --- !u!1 &5304969468715202842
 GameObject:
   m_ObjectHideFlags: 0

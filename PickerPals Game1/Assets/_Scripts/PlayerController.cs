@@ -77,6 +77,8 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public float mySpeed = 1;
+
     public void MovementControlKeys()
     {
 
@@ -90,7 +92,7 @@ public class PlayerController : MonoBehaviour
             curLane++;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position,lanePos[curLane].position,0.1f);
+        transform.position = Vector3.MoveTowards(transform.position,lanePos[curLane].position,mySpeed * GameStats.Globalspeed/1.5f * Time.deltaTime);
 
 
 

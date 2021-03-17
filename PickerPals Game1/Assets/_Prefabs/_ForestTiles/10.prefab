@@ -978,7 +978,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 682457807611029133, guid: 90fdef3dd65ba2a4d8b4fe81b9983012, type: 3}
+    - {fileID: 2856574665192410033, guid: 90fdef3dd65ba2a4d8b4fe81b9983012, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 90fdef3dd65ba2a4d8b4fe81b9983012, type: 3}
 --- !u!4 &6738303251261492495 stripped
 Transform:
@@ -1200,7 +1202,9 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1180045372973987432, guid: c3e132e02af20e94b9708e630fd2e16b, type: 3}
+    - {fileID: 2711120234474843585, guid: c3e132e02af20e94b9708e630fd2e16b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c3e132e02af20e94b9708e630fd2e16b, type: 3}
 --- !u!4 &347275999804433956 stripped
 Transform:

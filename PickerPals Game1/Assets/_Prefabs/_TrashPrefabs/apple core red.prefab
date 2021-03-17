@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2266512879564360646}
   - component: {fileID: 7366019773955135572}
   - component: {fileID: -6530104287206236407}
+  - component: {fileID: -8666184464531617759}
   m_Layer: 0
   m_Name: apple core red
   m_TagString: Item
@@ -146,3 +147,18 @@ MonoBehaviour:
   useMeshColliderRB: 0
   useCubeColliderRB: 1
   setTrig: 1
+--- !u!114 &-8666184464531617759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342251505530453901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee088f924d7e374b8582b73c2cdfb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeedX: 5
+  rotSpeedY: 5
+  rotSpeedZ: 5

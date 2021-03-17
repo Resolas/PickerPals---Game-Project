@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2126020778813687783}
   - component: {fileID: 6494410412765624236}
   - component: {fileID: -4977719489710854122}
+  - component: {fileID: -1550549841529791478}
   m_Layer: 0
   m_Name: Cantomato
   m_TagString: Untagged
@@ -131,3 +132,18 @@ MonoBehaviour:
   useMeshColliderRB: 0
   useCubeColliderRB: 1
   setTrig: 1
+--- !u!114 &-1550549841529791478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8015140003784133851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee088f924d7e374b8582b73c2cdfb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeedX: 5
+  rotSpeedY: 5
+  rotSpeedZ: 5

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuController : MonoBehaviour // World Rotator
+public class WorldController : MonoBehaviour // World Rotator
 {
 
     public GameObject getWorld;

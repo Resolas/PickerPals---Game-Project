@@ -225,6 +225,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4807969998898597888, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969998898597888, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969998898597888, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969998898597888, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969998898597888, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969998898597888, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MovementLaneControlTouch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969999464112525, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: levelsUnlocked.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969999464112525, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: getPlayer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969999464112525, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: startSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969999464112525, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: myLevelHighScores.Array.data[0]
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969999464112525, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: myLevelHighTimes.Array.data[0]
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807969999464112525, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: maxSpeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4807969999464112530, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
       propertyPath: m_Name
       value: SystemHolder
@@ -272,6 +320,14 @@ PrefabInstance:
     - target: {fileID: 4807969999464112531, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807970000064219180, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807970000064219180, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MovementLaneControlTouch
       objectReference: {fileID: 0}
     - target: {fileID: 5744614316783317976, guid: e14c119ba3039774a9d543f6e6834dec, type: 3}
       propertyPath: m_Name

@@ -35,10 +35,11 @@ public class DisplayLevelStats : MonoBehaviour  // Gets Info from GameStats and 
             if (levelNumber == i && findMyLevel[i] != false)
             {
                 Debug.Log(i);
-            //    getLevelStats(i);
+                //    getLevelStats(i);
 
-            //    getStatsUI.displayHighScore = getLevelStats.myLevelHighScores[i];
-
+                getStatsUI.displayHighScore = getLevelStats.myLevelHighScores[i];
+                getStatsUI.displayHighTime = getLevelStats.myLevelHighTimes[i];
+                getLevelStats.curLevelId = levelNumber;
 
                 getStatsUI.selectedLevelName = myLevelName;
                 getStatsUI.selectedLevelName = myLevelName;

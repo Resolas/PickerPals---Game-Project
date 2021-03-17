@@ -914,7 +914,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8930449637607621861, guid: c1b27bab8cd787045908852e6470fbec, type: 3}
+    - {fileID: 8356828863350374559, guid: c1b27bab8cd787045908852e6470fbec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c1b27bab8cd787045908852e6470fbec, type: 3}
 --- !u!4 &6766692953935295049 stripped
 Transform:

@@ -397,7 +397,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2856574665192410033, guid: 90fdef3dd65ba2a4d8b4fe81b9983012, type: 3}
+    - {fileID: 682457807611029133, guid: 90fdef3dd65ba2a4d8b4fe81b9983012, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 90fdef3dd65ba2a4d8b4fe81b9983012, type: 3}
 --- !u!4 &606133405933795912 stripped
 Transform:
@@ -533,7 +535,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8356828863350374559, guid: c1b27bab8cd787045908852e6470fbec, type: 3}
+    - {fileID: -8930449637607621861, guid: c1b27bab8cd787045908852e6470fbec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c1b27bab8cd787045908852e6470fbec, type: 3}
 --- !u!4 &6425979209465780146 stripped
 Transform:
@@ -829,7 +833,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6453844578997272264, guid: bf2d7524546f2fb4699f6b67c88fae5e, type: 3}
+    - {fileID: -6995028914575167831, guid: bf2d7524546f2fb4699f6b67c88fae5e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bf2d7524546f2fb4699f6b67c88fae5e, type: 3}
 --- !u!4 &607760708135252625 stripped
 Transform:

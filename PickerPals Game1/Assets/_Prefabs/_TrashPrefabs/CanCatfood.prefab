@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8711718823228683737}
   - component: {fileID: -3735076104884879436}
   - component: {fileID: -8896283443633526063}
+  - component: {fileID: -7439176701688504208}
   m_Layer: 0
   m_Name: CanCatfood
   m_TagString: Untagged
@@ -131,3 +132,18 @@ MonoBehaviour:
   useMeshColliderRB: 0
   useCubeColliderRB: 1
   setTrig: 1
+--- !u!114 &-7439176701688504208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801074210693817653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee088f924d7e374b8582b73c2cdfb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeedX: 5
+  rotSpeedY: 5
+  rotSpeedZ: 5

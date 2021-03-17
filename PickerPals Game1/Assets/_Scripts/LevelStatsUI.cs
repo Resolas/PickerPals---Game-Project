@@ -23,7 +23,7 @@ public class LevelStatsUI : MonoBehaviour   // The Canvas That Displays The Info
     public GameObject getGameStats;
 
     public int displayHighScore = 0;
-    public float displayTime = 0;
+    public float displayHighTime = 0;
     public int displayTotalTrash = 0;
 
     public string selectedLevelName;
@@ -35,11 +35,13 @@ public class LevelStatsUI : MonoBehaviour   // The Canvas That Displays The Info
 
     public void loadLevel()
     {
+    
+
         getGameStats.GetComponent<GameStats>().SetGlobalSpeed();
 
-
-
         SceneManager.LoadScene(selectedLevelName);
+
+     //   getGameStats.GetComponent<GameStats>().FindPlayerObject();
 
     }
 
@@ -47,7 +49,7 @@ public class LevelStatsUI : MonoBehaviour   // The Canvas That Displays The Info
     {
 
         highScoreText.text = displayHighScore.ToString();
-        timeText.text = displayHighScore.ToString();
+        timeText.text = displayHighTime.ToString();
         totalTrashText.text = displayHighScore.ToString();
         LevelNameText.text = selectedLevelName;
 

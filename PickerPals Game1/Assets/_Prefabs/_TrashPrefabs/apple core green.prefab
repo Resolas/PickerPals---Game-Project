@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5055062857187113836}
   - component: {fileID: -1282118630120623374}
   - component: {fileID: -3890648776318902697}
+  - component: {fileID: -5418097729815247529}
   m_Layer: 0
   m_Name: apple core green
   m_TagString: Item
@@ -146,3 +147,18 @@ MonoBehaviour:
   useMeshColliderRB: 0
   useCubeColliderRB: 1
   setTrig: 1
+--- !u!114 &-5418097729815247529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6479502665516913024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee088f924d7e374b8582b73c2cdfb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeedX: 5
+  rotSpeedY: 5
+  rotSpeedZ: 5

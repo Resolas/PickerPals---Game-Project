@@ -372,6 +372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParticleTrail
       objectReference: {fileID: 0}
+    - target: {fileID: 4634421832561110806, guid: e14c5e3a886a5d24998afcab93657377, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e14c5e3a886a5d24998afcab93657377, type: 3}
 --- !u!4 &6057503381286515348 stripped

@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 2443685384809463131}
   - component: {fileID: 7374814172541505641}
   - component: {fileID: -7721191957528382736}
+  - component: {fileID: 6201104283912422200}
   m_Layer: 0
   m_Name: Box 1
   m_TagString: Item
@@ -149,6 +150,21 @@ MonoBehaviour:
   useMeshColliderRB: 0
   useCubeColliderRB: 1
   setTrig: 1
+--- !u!114 &6201104283912422200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3072130344822106081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee088f924d7e374b8582b73c2cdfb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeedX: 5
+  rotSpeedY: 5
+  rotSpeedZ: 5
 --- !u!1 &4556682520154249396
 GameObject:
   m_ObjectHideFlags: 0

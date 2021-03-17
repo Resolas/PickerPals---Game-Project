@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 6275323665408236533}
   - component: {fileID: 8602331626115502981}
   - component: {fileID: 7744773317308891967}
+  - component: {fileID: 7712067296959630929}
   m_Layer: 0
   m_Name: PizzaBox
   m_TagString: Item
@@ -148,6 +149,21 @@ MonoBehaviour:
   useMeshColliderRB: 0
   useCubeColliderRB: 1
   setTrig: 1
+--- !u!114 &7712067296959630929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6655683686747521359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee088f924d7e374b8582b73c2cdfb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeedX: 5
+  rotSpeedY: 5
+  rotSpeedZ: 5
 --- !u!1 &8302035805168799703
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8515158286975284131}
   - component: {fileID: 1115001823596495076}
   - component: {fileID: -7758355199544607002}
+  - component: {fileID: -8510519657982818773}
   m_Layer: 0
   m_Name: Can 1
   m_TagString: Item
@@ -131,3 +132,18 @@ MonoBehaviour:
   useMeshColliderRB: 0
   useCubeColliderRB: 1
   setTrig: 1
+--- !u!114 &-8510519657982818773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8515158286975284130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee088f924d7e374b8582b73c2cdfb42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeedX: 5
+  rotSpeedY: 5
+  rotSpeedZ: 5

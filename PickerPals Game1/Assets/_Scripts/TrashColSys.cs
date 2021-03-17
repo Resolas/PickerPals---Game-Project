@@ -27,6 +27,7 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
 
         GameObject newTrash = Instantiate(_prefab,transform.position,Quaternion.identity);       
         newTrash.transform.SetParent(gameObject.transform);
+        Destroy(newTrash.GetComponent<SpinObject>());       // Spinning unneeded in while stored
 
         var getTrashComp = newTrash.GetComponent<TrashItem>();
         
@@ -86,6 +87,9 @@ public class TrashColSys : MonoBehaviour    // Trash Collection // Desc for ever
                 newTrashRB.AddComponent<Rigidbody>();
                 newTrashRB.AddComponent<BeltMove>();
                 newTrashRB.AddComponent<DragAndDrop>();
+
+                // Destroy/Remove Components for use in sorting stage
+              //  Destroy(newTrashRB.GetComponent<SpinObject>());
                 
 
                 // sets the new components values
