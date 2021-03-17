@@ -33,7 +33,7 @@ public class LevelStatsUI : MonoBehaviour   // The Canvas That Displays The Info
     public Text totalTrashText;
     public Text LevelNameText;
 
-    public void loadLevel()
+    public void loadLevel()     // Loads level and starts the game
     {
     
 

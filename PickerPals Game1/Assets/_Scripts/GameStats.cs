@@ -13,6 +13,7 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
     public float rampUp = 0.2f;
 
     public float maxSpeed = 40;
+    [SerializeField]
     private bool inPlay = false;
 
 
@@ -26,12 +27,15 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
     public string[] levelNames;
     public int curLevelId;      // Set in DisplayLevelStats
 
+
+    [Header("My GUIs")]
     public Text displayScore;
 
     public GameObject myRunnerGUI;
     public GameObject myMenuGUI;
     public GameObject myPauseGUI;
     public GameObject myDisplayStatsGUI;
+    public GameObject myGameOverGUI;
 
  //   public GameObject getPlayer;
     public Button myLeftButton;
@@ -70,11 +74,17 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
 
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseResume();
+        }
+
+
         
 
     }
 
-    IEnumerator StartDelay(float waitTime)
+    IEnumerator StartDelay(float waitTime)      // Starts up the game and turns "inPlay" To True
     {
         while (true)
         {
@@ -101,7 +111,7 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
     }
     */
 
-    public void SetGlobalSpeed()    // Sets Speed after generating
+    public void SetGlobalSpeed()    // Sets Speed after generating      used by LevelStatsUI
     {
 
         StartCoroutine(StartDelay(1));
@@ -158,18 +168,32 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
     public void LeaveGame()     // To Return to Menu
     {
         inPlay = false;
+        myMenuGUI.SetActive(true);
+        myPauseGUI.SetActive(false);
 
         SceneManager.LoadScene("MenuScene");
 
     }
 
-    public void PauseResume(int pause)       // To Pause or Resume Game
+    public void PauseResume()       // To Pause or Resume Game
     {
-        if (inPlay != true) return;
+        if (inPlay == false) return;     // If not currently in game do not run
 
-        Time.timeScale = pause;
+        if (myPauseGUI.activeSelf == true)
+        {
+            Time.timeScale = 1;
 
-        if (Time.timeScale == 1) myPauseGUI.SetActive(false);
+            myPauseGUI.SetActive(false);
+
+        }
+        else if (myPauseGUI.activeSelf == false)
+        {
+            Time.timeScale = 1;
+
+            myPauseGUI.SetActive(true);
+        }
+
+        
 
     }
 
