@@ -54,6 +54,13 @@ public class DisplayLevelStats : MonoBehaviour  // Gets Info from GameStats and 
 
     }
 
+    private void OnMouseOver()
+    {
+        
+    }
+
+    
+
     /*
     void getLevelStats(int _myLevel)
     {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameStats : MonoBehaviour      // All the interactions needed to navigate the game menu
 {
@@ -29,6 +30,7 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
 
     public GameObject myRunnerGUI;
     public GameObject myMenuGUI;
+    public GameObject myPauseGUI;
     public GameObject myDisplayStatsGUI;
 
  //   public GameObject getPlayer;
@@ -151,8 +153,23 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
         myLevelHighTimes[curLevelId] = myCurTime;
 
 
+    }
 
+    public void LeaveGame()     // To Return to Menu
+    {
+        inPlay = false;
 
+        SceneManager.LoadScene("MenuScene");
+
+    }
+
+    public void PauseResume(int pause)       // To Pause or Resume Game
+    {
+        if (inPlay != true) return;
+
+        Time.timeScale = pause;
+
+        if (Time.timeScale == 1) myPauseGUI.SetActive(false);
 
     }
 
