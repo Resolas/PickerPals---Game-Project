@@ -8,7 +8,7 @@ public class TrashItem : MonoBehaviour
     public TrashData myData;
 
     [Header("Trash Settings")]
-    public byte trashTypeId;
+    public byte trashTypeId;     // the type of trash    METAL = 0, GLASS = 1, PLASTIC = 2, PAPER&CARDBOARD = 3, FOOD = 4
 
     public GameObject myPrefab; // REFERENCE ITSELF
     public GameObject chosenModel; // OBSOLETE

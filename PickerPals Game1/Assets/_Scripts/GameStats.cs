@@ -34,6 +34,7 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
     public GameObject myRunnerGUI;
     public GameObject myMenuGUI;
     public GameObject myPauseGUI;
+    public GameObject myTouchPauseGUI;
     public GameObject myDisplayStatsGUI;
     public GameObject myGameOverGUI;
 
@@ -79,7 +80,14 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
             PauseResume();
         }
 
-
+        if (inPlay == true)
+        {
+            myTouchPauseGUI.SetActive(true);
+        }
+        else
+        {
+            myTouchPauseGUI.SetActive(false);
+        }
         
 
     }
