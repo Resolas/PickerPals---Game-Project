@@ -165,12 +165,15 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
 
     }
 
-    public void LeaveGame()     // To Return to Menu
+    public void LeaveGame()     // To Return to Menu & Reset Everything
     {
         inPlay = false;
         myMenuGUI.SetActive(true);
         myPauseGUI.SetActive(false);
-
+        Time.timeScale = 1;
+        Globalspeed = 0;
+        myCurScore = 0;
+        myCurTime = 0;
         SceneManager.LoadScene("MenuScene");
 
     }
@@ -188,7 +191,7 @@ public class GameStats : MonoBehaviour      // All the interactions needed to na
         }
         else if (myPauseGUI.activeSelf == false)
         {
-            Time.timeScale = 1;
+            Time.timeScale = 0;
 
             myPauseGUI.SetActive(true);
         }

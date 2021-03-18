@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool moveRight;
 
     public int health = 5;
-    public Text myText;
+    public Text myHPText;
 
     public Transform[] lanePos = new Transform[3];
     public int curLane = 1;
@@ -47,12 +47,13 @@ public class PlayerController : MonoBehaviour
         
         myRB.AddRelativeForce(transform.forward * forwardSpeed - myRB.velocity);
         GroundChecker();
-        UIElements();
+        
 
     }
 
     private void Update()
     {
+        UIElements();
         MovementControlKeys();
         if (/*Input.GetAxis("Jump") != 0 &&*/ onGround == true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -209,7 +210,7 @@ public class PlayerController : MonoBehaviour
     void UIElements()
     {
 
-        myText.text = health.ToString();
+        myHPText.text = health.ToString();
 
 
     }
