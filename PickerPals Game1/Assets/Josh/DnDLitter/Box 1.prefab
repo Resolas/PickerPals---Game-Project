@@ -96,11 +96,13 @@ MonoBehaviour:
   distanceToScreen: 0
   zoom: 4
   targetPos: {x: 0, y: 0, z: 0}
-  speed: 15
+  speed: 3
   selected: 0
   previousGrabPosition: {x: 0, y: 0, z: 0}
   throwSpeed: 0
   throwClamp: 5
+  forwardThrowSpeed: 10
+  throwYOffset: 5
   beltMoveScript: {fileID: 919132147972752260}
 --- !u!1 &2280127785879442917
 GameObject:

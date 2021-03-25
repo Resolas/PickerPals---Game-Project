@@ -13,7 +13,8 @@ public class DragAndDrop : MonoBehaviour
     
     // Movement
     public Vector3 targetPos;
-    public float speed = 4;
+    // public float speed = 4;     // Linear Ver
+    public float lerpSpeed = 0.1f;  // Lerp Ver
     
     // Select object
     public bool selected = false;
@@ -22,6 +23,8 @@ public class DragAndDrop : MonoBehaviour
     public Vector3 previousGrabPosition;
     public float throwSpeed;
     public float throwClamp;
+    public float forwardThrowSpeed = 10;
+    public float throwYOffset = 1;
 
     public BeltMove beltMoveScript;
     
@@ -55,15 +58,17 @@ public class DragAndDrop : MonoBehaviour
         selected = false;
         rb.constraints = RigidbodyConstraints.None;
         Vector3 throwVector = transform.position - previousGrabPosition;
+       
         throwSpeed = throwVector.magnitude / Time.deltaTime;
         Vector3 throwVelocity = throwSpeed * throwVector.normalized;
         //rb.velocity = throwVelocity/2;
-
-        var VelX = Mathf.Clamp(throwVelocity.x, -throwClamp, throwClamp);
+      
+        var VelX = Mathf.Clamp(throwVelocity.x/10, -throwClamp, throwClamp);
         var VelY = Mathf.Clamp(throwVelocity.y, -throwClamp, throwClamp);
-        
-        rb.velocity = new Vector3(VelX/2, VelY, 5);
+        Debug.Log(VelX);
+        rb.velocity = new Vector3(VelX, VelY/2 + throwYOffset, forwardThrowSpeed);
         //Debug.Log(new Vector3(VelX, VelY, 5));
+        
     }
     
     void FixedUpdate()
@@ -81,7 +86,9 @@ public class DragAndDrop : MonoBehaviour
             previousGrabPosition = transform.position;
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //Move object to mouse position
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+           // transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+
+            transform.position = Vector3.Lerp(transform.position, targetPos, 0.1f);
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
         else
